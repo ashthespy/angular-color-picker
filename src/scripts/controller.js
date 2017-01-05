@@ -560,7 +560,11 @@ export default class AngularColorPickerController {
             case 'hsv':
                 colorString = color.toHsvString();
                 break;
-
+                
+            case 'raw';    
+                colorString = color;  // Pass tinyColor object directly
+                break;
+                
             default:
                 colorString = color.toHslString();
                 break;
